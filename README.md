@@ -1,2 +1,5 @@
-# Hardened-Malloc
-Alpine OCI container for building Hardened-Malloc
+# hardened_malloc
+
+![Build, scan & push](https://github.com/Blue-OCI/hardened_malloc/actions/workflows/build.yml/badge.svg)
+
+hardened_malloc is built by this container and placed in `/extract`
