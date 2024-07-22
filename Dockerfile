@@ -20,5 +20,5 @@ RUN --network=none cd /tmp/hardened_malloc \
     && git config gpg.ssh.allowedSignersFile grapheneos_allowed_signers \
     && git verify-tag $(git describe --tags) \
     && make CONFIG_NATIVE=${CONFIG_NATIVE} VARIANT=${VARIANT} \
-    && mkdir -p /extract \
-    && cp /tmp/hardened_malloc/out/libhardened_malloc.so /extract
+    && mkdir -p /install \
+    && mv /tmp/hardened_malloc/out/libhardened_malloc.so /install

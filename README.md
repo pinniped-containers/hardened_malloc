@@ -3,7 +3,7 @@
 ![Build, scan & push](https://github.com/Blue-OCI/hardened_malloc/actions/workflows/build.yml/badge.svg)
 
 ### Features & usage
-hardened_malloc is built by this container and placed in `/extract`
+hardened_malloc is built by this container and placed in `/install`
 
 ### Licensing
 - The code in this repository is licensed under the Apache License. 😇
