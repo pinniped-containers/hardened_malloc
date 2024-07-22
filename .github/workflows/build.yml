@@ -18,12 +18,12 @@ env:
 
 jobs:
   build:
-    timeout-minutes: 10
     name: Build & push new image
-    runs-on: ubuntu-24.04
     permissions:
       contents: read
       packages: write
+    timeout-minutes: 10
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout code
@@ -63,11 +63,11 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
   trivy:
-    timeout-minutes: 10
     name: Scan current image with Trivy
     needs: build
     permissions:
       security-events: write
+    timeout-minutes: 10
     runs-on: ubuntu-24.04
     steps:
       - name: Run Trivy vulnerability scanner
@@ -87,11 +87,11 @@ jobs:
           category: trivy
 
   grype:
-    timeout-minutes: 10
     name: Scan current image with Grype
     needs: build
     permissions:
       security-events: write
+    timeout-minutes: 10
     runs-on: ubuntu-24.04
     steps:
       - name: Run Grype vulnerability scanner
