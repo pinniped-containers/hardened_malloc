@@ -1,6 +1,6 @@
 # hardened_malloc
 
-![Build, scan & push](https://github.com/Blue-OCI/hardened_malloc/actions/workflows/build.yml/badge.svg)
+![Build, scan & push](https://github.com/Polarix-Containers/hardened_malloc/actions/workflows/build.yml/badge.svg)
 
 ### Features & usage
 hardened_malloc is built by this container and placed in `/install`

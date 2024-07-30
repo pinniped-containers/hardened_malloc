@@ -14,7 +14,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: blue-oci/hardened_malloc
+  IMAGE_NAME: polarix-containers/hardened_malloc
 
 jobs:
   build:
