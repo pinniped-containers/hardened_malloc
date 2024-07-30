@@ -1,6 +1,6 @@
 ARG VERSION=2024071600
 
-FROM ghcr.io/blue-oci/alpine-builder:latest
+FROM ghcr.io/polarix-containers/alpine-builder:latest
 
 LABEL maintainer="Thien Tran contact@tommytran.io"
 
