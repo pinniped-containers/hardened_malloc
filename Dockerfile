@@ -1,4 +1,4 @@
-ARG VERSION=2024071600
+ARG VERSION=2024080500
 
 FROM ghcr.io/polarix-containers/alpine-builder:latest
 
