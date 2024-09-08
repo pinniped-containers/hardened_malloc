@@ -1,6 +1,6 @@
 ARG VERSION=2024080500
 
-FROM ghcr.io/polarix-containers/alpine-builder:latest
+FROM alpine:latest
 
 LABEL maintainer="Thien Tran contact@tommytran.io"
 
@@ -9,6 +9,7 @@ ARG CONFIG_NATIVE=false
 ARG VARIANT=default
 
 RUN apk -U upgrade \
+    && apk --no-cache add build-base git gnupg openssh-keygen \
     && rm -rf /var/cache/apk/*
     
 RUN cd /tmp \
