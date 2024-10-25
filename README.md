@@ -6,6 +6,6 @@
 hardened_malloc is built by this container and placed in `/install`
 
 ### Licensing
-- The code in this repository is licensed under the Apache License. 😇
+- The code in this repository is licensed under the Apache license. 😇
 - hardened_malloc is under the MIT license. Copyright to hardened_malloc belongs to GrapheneOS.
 - Any image built by Polarix Containers is provided under the combination of license terms resulting from the use of individual packages.
