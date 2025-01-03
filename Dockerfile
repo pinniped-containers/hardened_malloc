@@ -8,15 +8,14 @@ ARG VERSION
 ARG CONFIG_NATIVE=false
 ARG VARIANT=default
 
-RUN apk -U upgrade \
-    && apk --no-cache add build-base git gnupg openssh-keygen \
-    && rm -rf /var/cache/apk/*
-
 WORKDIR /root/hardened_malloc
 
 ADD --keep-git-dir=true https://github.com/GrapheneOS/hardened_malloc.git#${VERSION} .
     
-RUN wget -q https://grapheneos.org/allowed_signers -O grapheneos_allowed_signers
+RUN apk -U upgrade \
+    && apk --no-cache add build-base git gnupg openssh-keygen \
+    && rm -rf /var/cache/apk/* \
+    && wget -q https://grapheneos.org/allowed_signers -O grapheneos_allowed_signers
 
 RUN --network=none \
     git config gpg.ssh.allowedSignersFile grapheneos_allowed_signers \
