@@ -23,4 +23,4 @@ RUN --network=none \
     && git verify-tag $(git describe --tags) \
     && make CONFIG_NATIVE=${CONFIG_NATIVE} VARIANT=${VARIANT} \
     && mkdir -p /install \
-    && mv /tmp/hardened_malloc/out/libhardened_malloc.so /install
+    && mv out/libhardened_malloc.so /install
