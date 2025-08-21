@@ -7,10 +7,7 @@ on:
       - main
     paths:
       - '.github/workflows/build.yml'
-      - 'build/**'
-    # Ignore Markdown files
-    paths-ignore:
-      - '**.md'
+      - 'latest/**'
   schedule:
     # Build the image daily
     - cron: '0 0 * * *'
@@ -65,7 +62,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: ${{ env.TAG }}
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
