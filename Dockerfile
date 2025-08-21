@@ -2,7 +2,7 @@ ARG VERSION=2025070800
 
 FROM cgr.dev/chainguard/wolfi-base:latest
 
-LABEL maintainer="Thien Tran contact@tommytran.io"
+LABEL maintainer="Winnie The Pooh winsdominoes@winscloud.net"
 
 ARG VERSION
 ARG CONFIG_NATIVE=false
