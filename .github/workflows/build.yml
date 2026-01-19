@@ -14,7 +14,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: polarix-containers/hardened_malloc
+  IMAGE_NAME: pinniped-containers/hardened_malloc
   TAG: latest
 
 jobs:
