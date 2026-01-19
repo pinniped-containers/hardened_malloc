@@ -1,8 +1,8 @@
 ARG VERSION=2026010800
 
-FROM alpine:latest
+FROM cgr.dev/chainguard/wolfi-base:latest
 
-LABEL maintainer="Thien Tran contact@tommytran.io"
+LABEL maintainer="Winnie The Pooh winsdominoes@winscloud.net"
 
 ARG VERSION
 ARG CONFIG_NATIVE=false
@@ -13,7 +13,7 @@ WORKDIR /root/hardened_malloc
 ADD --keep-git-dir=true https://github.com/GrapheneOS/hardened_malloc.git#${VERSION} .
     
 RUN apk -U upgrade \
-    && apk --no-cache add build-base git gnupg openssh-keygen \
+    && apk --no-cache add build-base git gnupg openssh-keygen wget \
     && rm -rf /var/cache/apk/* \
     && wget -q https://grapheneos.org/allowed_signers -O grapheneos_allowed_signers
 
